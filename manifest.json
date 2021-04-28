@@ -1,0 +1,37 @@
+{
+    "name": "Absent for employees Tomosia",
+    "description": "Build an Extension!",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "host_permissions": [
+        "http://*/"
+    ],
+    "permissions": [
+        "storage", "identity", "cookies", "activeTab"
+    ],
+    "action": {
+        "default_popup": "popup/popup.html",
+        "js": "popup/popup.js",
+        "default_icon":{
+            "32": "styles/16.png"
+        },  
+        "default_title": "Absent Tomosia"
+
+    },
+    "icons": {
+        "32": "styles/16.png"
+    },
+    "oauth2": {
+        "client_id": "609257588307-df7fup2kjqlio9db8mosvm3smhhhj4rd.apps.googleusercontent.com",
+        "scopes": [
+            "https://www.googleapis.com/auth/gmail.readonly",
+            "https://www.googleapis.com/auth/spreadsheets"
+        ]
+    },
+    "content_security_policy": {
+        "extension_pages": "script-src 'self' ;script-src-elem 'self' https://apis.google.com https://ajax.aspnetcdn.com https://smtpjs.com/v3/smtp.js; object-src 'none'"
+    }
+}
